@@ -128,7 +128,9 @@ class Really_Simple_Taxonomies_For_Pages {
             )
         );
         
-        register_taxonomy( 'page_category', 'page', $args );
+        if ( !taxonomy_exists( 'page_category' ) ) {
+            register_taxonomy( 'page_category', 'page', $args );
+        }
 
         // Adds tag taxonomy to pages
         $labels = array(
@@ -168,7 +170,9 @@ class Really_Simple_Taxonomies_For_Pages {
             )
         );
         
-        register_taxonomy( 'page_tag', 'page', $args );
+        if ( !taxonomy_exists( 'page_tag' ) ) {
+            register_taxonomy( 'page_tag', 'page', $args );
+        }
 
     }
 
