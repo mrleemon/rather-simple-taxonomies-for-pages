@@ -90,7 +90,8 @@ class Really_Simple_Taxonomies_For_Pages {
      * @since 1.0
      */
     function register_taxonomy() {
-        
+
+        // Adds category taxonomy to pages
         $labels = array(
             'name'                       => _x( 'Categories', 'taxonomy general name' ),
             'singular_name'              => _x( 'Category', 'taxonomy singular name' ),
@@ -128,6 +129,47 @@ class Really_Simple_Taxonomies_For_Pages {
         );
         
         register_taxonomy( 'page_category', 'page', $args );
+
+        // Adds tag taxonomy to pages
+        $labels = array(
+            'name'                       => _x( 'Tags', 'taxonomy general name' ),
+            'singular_name'              => _x( 'Tag', 'taxonomy singular name' ),
+            'search_items'               => __( 'Search Tags' ),
+            'popular_items'              => __( 'Popular Tags' ),
+            'all_items'                  => __( 'All Tags' ),
+            'edit_item'                  => __( 'Edit Tag' ),
+            'view_item'                  => __( 'View Tag' ),
+            'update_item'                => __( 'Update Tag' ),
+            'add_new_item'               => __( 'Add New Tag' ),
+            'new_item_name'              => __( 'New Tag Name' ),
+            'separate_items_with_commas' => __( 'Separate tags with commas' ),
+            'add_or_remove_items'        => __( 'Add or remove tags' ),
+            'choose_from_most_used'      => __( 'Choose from the most used tags' ),
+            'not_found'                  => __( 'No tags found.' ),
+            'no_terms'                   => __( 'No tags' ),
+            'items_list_navigation'      => __( 'Tags list navigation' ),
+            'items_list'                 => __( 'Tags list' ),
+            'most_used'                  => _x( 'Most Used', 'tags' ),
+            'back_to_items'              => __( '&larr; Back to Tags' ),
+        );
+
+        $args = array(
+            'labels' => $labels,
+            'hierarchical' => false,
+            'public' => true,
+            'show_ui' => true,
+            'show_in_rest' => true,
+            'show_admin_column' => true,
+            'show_in_nav_menus' => true,
+            'query_var' => true,
+            'rewrite' => array(
+                'slug' => 'page_tag',
+                'with_front' => false
+            )
+        );
+        
+        register_taxonomy( 'page_tag', 'page', $args );
+
     }
 
 }
