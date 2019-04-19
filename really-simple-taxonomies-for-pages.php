@@ -24,71 +24,71 @@ License: GPLv2 or later
 */
 
 class Really_Simple_Taxonomies_For_Pages {
-	
-	/**
-	 * Plugin instance.
-	 *
-	 * @see get_instance()
-	 * @type object
-	 */
-	protected static $instance = null;
+    
+    /**
+     * Plugin instance.
+     *
+     * @see get_instance()
+     * @type object
+     */
+    protected static $instance = null;
 
 
-	/**
-	 * Access this plugin’s working instance
-	 *
-	 * @wp-hook plugins_loaded
-	 * @return  object of this class
-	 */
-	public static function get_instance() {
-		
-		if ( !self::$instance ) {
-			self::$instance = new self;
-		}
+    /**
+     * Access this plugin’s working instance
+     *
+     * @wp-hook plugins_loaded
+     * @return  object of this class
+     */
+    public static function get_instance() {
+        
+        if ( !self::$instance ) {
+            self::$instance = new self;
+        }
 
-		return self::$instance;
+        return self::$instance;
 
-	}
+    }
 
-	
-	/**
-	 * Used for regular plugin work.
-	 *
-	 * @wp-hook plugins_loaded
-	 * @return  void
-	 */
-	public function plugin_setup() {
-		
-		// Init
-		add_action( 'init', array( $this, 'load_language' ) );
-		add_action( 'init', array( $this, 'register_taxonomy' ) );
+    
+    /**
+     * Used for regular plugin work.
+     *
+     * @wp-hook plugins_loaded
+     * @return  void
+     */
+    public function plugin_setup() {
+        
+        // Init
+        add_action( 'init', array( $this, 'load_language' ) );
+        add_action( 'init', array( $this, 'register_taxonomy' ) );
 
-	}
-	
-	
-	/**
-	 * Constructor. Intentionally left empty and public.
-	 *
-	 * @see plugin_setup()
-	 */
-	public function __construct() {}
+    }
+    
+    
+    /**
+     * Constructor. Intentionally left empty and public.
+     *
+     * @see plugin_setup()
+     */
+    public function __construct() {}
 
-	
-	/*
-	 * load_language
-	 *
-	 * @since 1.0
-	 */
+    
+    /*
+     * load_language
+     *
+     * @since 1.0
+     */
     function load_language() {
-		load_plugin_textdomain( 'really-simple-taxonomies-for-pages', '', dirname(plugin_basename( __FILE__ )) . '/languages/' );
+        load_plugin_textdomain( 'really-simple-taxonomies-for-pages', '', dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
     }
 
     
     /*
-	 * register_taxonomy
-	 *
-	 * @since 1.0
-	 */
+     * register_taxonomy
+     *
+     * @since 1.0
+     */
     function register_taxonomy() {
         
         $labels = array(
@@ -126,7 +126,7 @@ class Really_Simple_Taxonomies_For_Pages {
                 'hierarchical' => true
             )
         );
-		
+        
         register_taxonomy( 'page_category', 'page', $args );
     }
 
