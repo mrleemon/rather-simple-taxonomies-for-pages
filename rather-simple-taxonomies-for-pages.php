@@ -1,12 +1,12 @@
 <?php
 /*
-Plugin Name: Really Simple Taxonomies for Pages
+Plugin Name: Rather Simple Taxonomies for Pages
 Plugin URI: 
 Description: Adds exclusive categories and tags for pages.
 Version: 1.0
 Author: Oscar Ciutat
 Author URI: http://oscarciutat.com/code/
-Text Domain: really-simple-taxonomies-for-pages
+Text Domain: rather-simple-taxonomies-for-pages
 License: GPLv2 or later
 
   This program is free software; you can redistribute it and/or modify
@@ -23,7 +23,7 @@ License: GPLv2 or later
   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-class Really_Simple_Taxonomies_For_Pages {
+class Rather_Simple_Taxonomies_For_Pages {
     
     /**
      * Plugin instance.
@@ -80,7 +80,7 @@ class Really_Simple_Taxonomies_For_Pages {
      * @since 1.0
      */
     function load_language() {
-        load_plugin_textdomain( 'really-simple-taxonomies-for-pages', '', dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+        load_plugin_textdomain( 'rather-simple-taxonomies-for-pages', '', dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
     }
 
     
@@ -178,4 +178,4 @@ class Really_Simple_Taxonomies_For_Pages {
 
 }
 
-add_action( 'plugins_loaded', array ( Really_Simple_Taxonomies_For_Pages::get_instance(), 'plugin_setup' ) );
+add_action( 'plugins_loaded', array ( Rather_Simple_Taxonomies_For_Pages::get_instance(), 'plugin_setup' ) );

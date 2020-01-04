@@ -1,4 +1,4 @@
-=== Really Simple Taxonomies for Pages ===
+=== Rather Simple Taxonomies for Pages ===
 Contributors: leemon
 Tags: pages, taxonomies, categories, tags
 Requires at least: 4.0
