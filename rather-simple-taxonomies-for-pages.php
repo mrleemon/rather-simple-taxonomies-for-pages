@@ -1,7 +1,8 @@
 <?php
 /*
 Plugin Name: Rather Simple Taxonomies for Pages
-Plugin URI: 
+Plugin URI:
+Update URI: false 
 Description: Adds exclusive categories and tags for pages.
 Version: 1.0
 Author: Oscar Ciutat
