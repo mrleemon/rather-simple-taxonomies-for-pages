@@ -34,7 +34,6 @@ class Rather_Simple_Taxonomies_For_Pages {
      */
     protected static $instance = null;
 
-
     /**
      * Access this plugin’s working instance
      *
@@ -50,7 +49,6 @@ class Rather_Simple_Taxonomies_For_Pages {
         return self::$instance;
 
     }
-
     
     /**
      * Used for regular plugin work.
@@ -65,17 +63,15 @@ class Rather_Simple_Taxonomies_For_Pages {
         add_action( 'init', array( $this, 'register_taxonomy' ) );
 
     }
-    
-    
+   
     /**
      * Constructor. Intentionally left empty and public.
      *
      * @see plugin_setup()
      */
     public function __construct() {}
-
     
-    /*
+    /**
      * load_language
      *
      * @since 1.0
@@ -83,9 +79,8 @@ class Rather_Simple_Taxonomies_For_Pages {
     function load_language() {
         load_plugin_textdomain( 'rather-simple-taxonomies-for-pages', '', dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
     }
-
     
-    /*
+    /**
      * register_taxonomy
      *
      * @since 1.0
