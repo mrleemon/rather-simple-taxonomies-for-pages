@@ -73,7 +73,7 @@ class Rather_Simple_Taxonomies_For_Pages {
 	 * Load language
 	 */
 	public function load_language() {
-		load_plugin_textdomain( 'rather-simple-taxonomies-for-pages', '', dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+		load_plugin_textdomain( 'rather-simple-taxonomies-for-pages', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 	}
 
 	/**
