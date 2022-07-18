@@ -3,11 +3,13 @@
  * Plugin Name: Rather Simple Taxonomies for Pages
  * Plugin URI:
  * Update URI: false
- * Description: Adds exclusive categories and tags for pages.
  * Version: 1.0
+ * Requires at least: 5.3
+ * Requires PHP: 7.0
  * Author: Oscar Ciutat
  * Author URI: http://oscarciutat.com/code/
  * Text Domain: rather-simple-taxonomies-for-pages
+ * Description: Adds exclusive categories and tags for pages.
  * License: GPLv2 or later
  *
  * This program is free software; you can redistribute it and/or modify
