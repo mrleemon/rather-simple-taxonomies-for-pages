@@ -52,7 +52,6 @@ class Rather_Simple_Taxonomies_For_Pages {
 		}
 
 		return self::$instance;
-
 	}
 
 	/**
@@ -63,7 +62,6 @@ class Rather_Simple_Taxonomies_For_Pages {
 		// Init.
 		add_action( 'init', array( $this, 'load_language' ) );
 		add_action( 'init', array( $this, 'register_taxonomy' ) );
-
 	}
 
 	/**
@@ -165,9 +163,7 @@ class Rather_Simple_Taxonomies_For_Pages {
 		if ( ! taxonomy_exists( 'page_tag' ) ) {
 			register_taxonomy( 'page_tag', 'page', $args );
 		}
-
 	}
-
 }
 
 add_action( 'plugins_loaded', array( Rather_Simple_Taxonomies_For_Pages::get_instance(), 'plugin_setup' ) );
