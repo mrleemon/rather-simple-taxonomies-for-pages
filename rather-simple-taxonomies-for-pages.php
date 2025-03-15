@@ -9,6 +9,7 @@
  * Author: Oscar Ciutat
  * Author URI: http://oscarciutat.com/code/
  * Text Domain: rather-simple-taxonomies-for-pages
+ * Domain Path: /languages
  * Description: Adds exclusive categories and tags for pages.
  * License: GPLv2 or later
  *
