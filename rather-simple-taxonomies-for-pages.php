@@ -4,7 +4,7 @@
  * Plugin URI:
  * Update URI: false
  * Version: 1.0
- * Requires at least: 5.3
+ * Requires at least: 6.8
  * Requires PHP: 7.4
  * Author: Oscar Ciutat
  * Author URI: http://oscarciutat.com/code/
@@ -61,7 +61,6 @@ class Rather_Simple_Taxonomies_For_Pages {
 	public function plugin_setup() {
 
 		// Init.
-		add_action( 'init', array( $this, 'load_language' ) );
 		add_action( 'init', array( $this, 'register_taxonomy' ) );
 	}
 
@@ -69,13 +68,6 @@ class Rather_Simple_Taxonomies_For_Pages {
 	 * Constructor. Intentionally left empty and public.
 	 */
 	public function __construct() {}
-
-	/**
-	 * Load language
-	 */
-	public function load_language() {
-		load_plugin_textdomain( 'rather-simple-taxonomies-for-pages', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
-	}
 
 	/**
 	 * Register taxonomy
